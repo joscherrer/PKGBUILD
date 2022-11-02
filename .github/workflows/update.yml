@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Test
-        run: ls -lah
+        run: ls -lRah
       # - name: Fetch latest remote tag
       #   id: remote
       #   run: |
