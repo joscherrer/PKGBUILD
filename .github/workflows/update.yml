@@ -18,12 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: python:latest
-    # outputs:
-    #   remote: ${{ steps.remote.outputs.version }}
-    #   local: ${{ steps.local.outputs.version }}
+    outputs:
+      remote: ${{ steps.remote.outputs.version }}
+      local: ${{ steps.local.outputs.version }}
     steps:
+      - uses: actions/checkout@v3
       - name: Test
-        id: remote
         run: ls -lah
       # - name: Fetch latest remote tag
       #   id: remote
